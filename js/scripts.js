@@ -25,6 +25,7 @@ var vowel = function(letter) {
   }
 };
 
+
 var isVowel = function(word) {
   return(word+"ay");
 };
@@ -34,11 +35,20 @@ var isConsonant = function(word) {
   var consonantMove = word.split("");
   var consonantWord = [];
 
-    while (! vowel(consonantMove[0])) {
-      var letter = consonantMove.shift()
-      consonantMove.push(letter)
-      var answer = consonantMove.join("")+'ay';
-    }
-    return answer;
+  if word.includes('qu') {
+    new_array = word.split("")
+    for (var index = 0; index < new_array.length; index += 1) {
+    new_array[index] = "q" 
 
+
+    }
+
+  }
+
+  while (! vowel(consonantMove[0])) {
+    var letter = consonantMove.shift()
+    consonantMove.push(letter)
+    var answer = consonantMove.join("")+'ay';
+  }
+  return answer;
 };

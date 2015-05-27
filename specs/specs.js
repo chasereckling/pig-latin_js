@@ -24,4 +24,8 @@ describe('isConsonant', function(){
   it("moves the first set of consonants up to the first vowel, to the end of the word and adds 'ay'", function(){
     expect(isConsonant('car')).to.equal('arcay');
   });
+
+  it("words that contain 'qu' will have 'qu' moved to the end of the word and add 'ay'", function(){
+    expect(isConsonant('quiet')).to.equal("ietquay")
+  });
 });
